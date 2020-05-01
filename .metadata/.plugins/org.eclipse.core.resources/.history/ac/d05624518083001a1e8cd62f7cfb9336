@@ -1,0 +1,24 @@
+package selenium3.and4;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WindowType;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class NEwWindow {
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\gokulsekar13\\"
+				+ "Desktop\\eclipse\\selenium3,4\\project\\driver\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(100,TimeUnit.SECONDS);
+		driver.get("https://www.amazon.in/");
+		for(int i=1;i<=5;i++) {
+		
+		driver.switchTo().newWindow(WindowType.WINDOW);
+		
+		driver.navigate().to("https://www.facebook.com");
+	}
+
+}
+}

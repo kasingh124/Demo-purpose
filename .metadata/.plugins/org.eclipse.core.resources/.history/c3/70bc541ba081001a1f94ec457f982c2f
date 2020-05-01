@@ -1,0 +1,21 @@
+package selenium3.and4;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Rectangle;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class ObjectLocation {
+public static void main(String[] args) {
+	System.setProperty("webdriver.chrome.driver","C:\\Users\\gokulsekar13\\Desktop\\eclipse\\selenium3,4\\project\\driver\\chromedriver.exe");
+	WebDriver driver=new ChromeDriver();
+	driver.get("https://www.amazon.in/");
+	WebElement logo=driver.findElement(By.xpath("//a[@class='nav-logo-link']"));
+	Rectangle r=logo.getRect();
+	System.out.println(r.getDimension().getHeight());
+	System.out.println(r.getDimension().getHeight());
+	System.out.println(r.getX());
+	System.out.println(r.getY());
+	}
+}
